@@ -100,6 +100,7 @@ void diag_md_open_device(int id)
 			ch->ops->open(ch->ctx, DIAG_MEMORY_DEVICE_MODE);
 
 }
+
 void diag_md_close_all(void)
 {
 	int i, j;
