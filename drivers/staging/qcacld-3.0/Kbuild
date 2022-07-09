@@ -2252,6 +2252,8 @@ ifeq ($(CONFIG_QCOM_ESE), y)
 cppflags-y += -DFEATURE_WLAN_ESE
 endif
 
+subdir-ccflags-y := $(call cc-disable-warning, array-parameter)
+
 #normally, TDLS negative behavior is not needed
 cppflags-$(CONFIG_QCOM_TDLS) += -DFEATURE_WLAN_TDLS
 
